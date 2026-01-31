@@ -12,7 +12,7 @@ export default defineConfig({
       },
       shared: ['react', 'react-dom'],
     }),
-    {
+    { // Hot reload data from remote app
       name: 'vite-plugin-reload-endpoint',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {

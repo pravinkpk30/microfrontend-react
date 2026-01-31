@@ -14,7 +14,7 @@ export default defineConfig({
       },
       shared: ['react', 'react-dom'],
     }),
-    {
+    { // Below plugin is used to notify host app for sharing updated remoteEntry.js
       name: 'vite-plugin-notify-host-on-rebuild',
       apply(config, { command }) {
         return Boolean(command === 'build' && config.build?.watch);
